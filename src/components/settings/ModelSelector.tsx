@@ -210,12 +210,16 @@ function ApiTokenInput() {
     setIsVerifying(true);
     setVerifyResult(null);
     try {
-      const result = await checkModel('moonshotai/kimi-k2.6:free');
-      setVerifyResult(result.available ? 'valid' : 'invalid');
-      if (result.available) {
+      const result = await checkModel('nousresearch/hermes-3-llama-3.1-405b:free');
+      // Token is valid if: available OR rate_limited (means token works, just hit limit)
+      const isValid = result.available || result.reason === 'rate_limited';
+      setVerifyResult(isValid ? 'valid' : 'invalid');
+      if (isValid) {
         toast({
           title: 'Токен валиден',
-          description: 'API-ключ работает корректно.',
+          description: result.reason === 'rate_limited'
+            ? 'API-ключ работает, но достигнут лимит запросов. Попробуйте позже.'
+            : 'API-ключ работает корректно.',
         });
       } else {
         toast({

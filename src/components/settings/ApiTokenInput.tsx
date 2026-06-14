@@ -40,7 +40,7 @@ export function ApiTokenInput() {
       const res = await fetch('/api/models/check', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ model: 'moonshotai/kimi-k2.6:free', apiToken: token }),
+        body: JSON.stringify({ model: 'nousresearch/hermes-3-llama-3.1-405b:free', apiToken: token }),
       });
 
       const data = await res.json();

@@ -4,7 +4,7 @@ const STORAGE_KEY = 'llm-red-team-lab-model';
 const RATE_LIMIT_KEY = 'llm-red-team-lab-rate-limits';
 const TOKEN_KEY = 'llm-red-team-lab-api-token';
 
-const DEFAULT_MODEL = 'moonshotai/kimi-k2.6:free';
+const DEFAULT_MODEL = 'nousresearch/hermes-3-llama-3.1-405b:free';
 
 export interface ModelRateLimit {
   available: boolean;
