@@ -4,7 +4,7 @@ const STORAGE_KEY = 'llm-red-team-lab-model';
 const RATE_LIMIT_KEY = 'llm-red-team-lab-rate-limits';
 const TOKEN_KEY = 'llm-red-team-lab-api-token';
 
-const DEFAULT_MODEL = 'nousresearch/hermes-3-llama-3.1-405b:free';
+const DEFAULT_MODEL = 'huihui_ai/gemma-4-abliterated:e2b';
 
 export interface ModelRateLimit {
   available: boolean;

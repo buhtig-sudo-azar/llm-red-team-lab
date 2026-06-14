@@ -22,6 +22,7 @@ import { useToast } from '@/hooks/use-toast';
 import { ModelAvailabilityPanel } from './ModelAvailabilityPanel';
 
 const DEFAULT_MODELS = [
+  { id: 'huihui_ai/gemma-4-abliterated:e2b', name: 'Gemma 4 Abliterated', label: 'Gemma 4 Abliterated 🔥 Без цензуры' },
   { id: 'nousresearch/hermes-3-llama-3.1-405b:free', name: 'Hermes 3 405B', label: 'Hermes 3 405B (Free)' },
   { id: 'moonshotai/kimi-k2.6:free', name: 'Kimi K2.6', label: 'Kimi K2.6 (Free)' },
   { id: 'nvidia/nemotron-3-ultra-550b-a55b:free', name: 'Nemotron Ultra', label: 'Nemotron Ultra (Free)' },

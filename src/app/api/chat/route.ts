@@ -44,6 +44,7 @@ async function getFreeModels(): Promise<string[]> {
 
 function getFallbackModels(): string[] {
   return [
+    'huihui_ai/gemma-4-abliterated:e2b',
     'nousresearch/hermes-3-llama-3.1-405b:free',
     'moonshotai/kimi-k2.6:free',
     'nvidia/nemotron-3-ultra-550b-a55b:free',
