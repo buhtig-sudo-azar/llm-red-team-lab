@@ -68,7 +68,7 @@ export function AgentChatPopup() {
        lastAssistantMessage.content.includes('ошибка сети'))
     : false;
 
-  const currentAgent = agent || agents['llm-fundamentals'];
+  const currentAgent = agent || Object.values(agents)[0];
 
   // Чат закрыт — показываем только иконку чата
   if (!chatOpen) {

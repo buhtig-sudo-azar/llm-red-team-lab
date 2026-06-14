@@ -128,14 +128,10 @@ export interface PracticalExample {
 }
 
 export type SandboxType =
-  | 'cache-flow-sim' | 'cache-key-lab' | 'delimiter-lab' | 'path-mapping-lab'
-  | 'normalization-lab' | 'static-rule-lab' | 'attack-builder' | 'cache-defense-lab'
-  | 'header-inspector' | 'url-parser' | 'encoding-lab' | 'request-flow-lab'
-  | 'prompt-injection-sim' | 'indirect-injection-detector' | 'api-call-sim'
-  | 'output-sanitizer' | 'data-poisoning-sim' | 'vuln-scanner'
-  | 'defense-configurator' | 'token-counter' | 'embedding-visualizer'
-  | 'scanner-exploit-sim' | 'chain-builder' | 'exfiltration-lab'
-  | 'scanner-defense-lab' | 'data-leak-detector';
+  | 'jailbreak-lab' | 'prompt-inject-lab' | 'chain-attack-lab' | 'exfiltration-lab'
+  | 'model-extract-lab' | 'rag-inject-lab' | 'adversarial-suffix-lab' | 'roleplay-bypass-lab'
+  | 'multimodal-attack-lab' | 'api-exploit-lab' | 'data-poison-lab' | 'output-weaponize-lab'
+  | 'side-channel-lab' | 'context-inject-lab' | 'token-smuggle-lab' | 'agent-hijack-lab';
 
 export interface Sandbox {
   type: SandboxType;

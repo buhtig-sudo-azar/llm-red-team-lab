@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LLM Attacks Lab — Атаки на языковые модели",
-  description: "Интерактивная лаборатория для изучения атак на LLM: prompt injection, эксплуатация API, небезопасная обработка вывода, отравление данных по материалам PortSwigger",
-  keywords: ["LLM", "Prompt Injection", "AI Security", "LLM Attacks", "PortSwigger", "Cybersecurity", "AI Safety", "Обучение"],
+  title: "LLM Red Team Lab — Атаки на языковые модели",
+  description: "Интерактивная лаборатория по атакам на LLM: jailbreak, prompt injection, model extraction, data exfiltration и новейшие техники эксплуатации",
+  keywords: ["LLM", "Red Team", "Jailbreak", "Prompt Injection", "AI Hacking", "Model Extraction", "Adversarial Attacks", "Cybersecurity"],
   icons: {
     icon: "/favicon.png",
   },
