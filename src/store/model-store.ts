@@ -1,8 +1,8 @@
 import { create } from 'zustand';
 
-const STORAGE_KEY = 'cache-deception-lab-model';
-const RATE_LIMIT_KEY = 'cache-deception-lab-rate-limits';
-const TOKEN_KEY = 'cache-deception-lab-api-token';
+const STORAGE_KEY = 'llm-red-team-lab-model';
+const RATE_LIMIT_KEY = 'llm-red-team-lab-rate-limits';
+const TOKEN_KEY = 'llm-red-team-lab-api-token';
 
 const DEFAULT_MODEL = 'moonshotai/kimi-k2.6:free';
 

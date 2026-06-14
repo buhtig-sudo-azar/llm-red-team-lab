@@ -20,8 +20,8 @@ export async function POST(req: NextRequest) {
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
-        'HTTP-Referer': 'https://cache-deception-lab.app',
-        'X-Title': 'Cache Deception Lab Probe',
+        'HTTP-Referer': 'https://llm-red-team-lab.vercel.app',
+        'X-Title': 'LLM Red Team Lab Probe',
       },
       body: JSON.stringify({
         model,

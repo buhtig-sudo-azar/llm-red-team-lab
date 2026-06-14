@@ -82,7 +82,7 @@ export async function POST(req: NextRequest) {
     }
 
     const allMessages = [
-      { role: 'system', content: systemPrompt || 'Ты — AI-наставник по Web Cache Deception. Отвечай на русском языке.' },
+      { role: 'system', content: systemPrompt || 'Ты — AI-наставник по атакам на LLM (Red Team). Отвечай на русском языке.' },
       ...messages,
     ];
 
@@ -104,8 +104,8 @@ export async function POST(req: NextRequest) {
             headers: {
               Authorization: `Bearer ${apiKey}`,
               'Content-Type': 'application/json',
-              'HTTP-Referer': 'https://cache-deception-lab.app',
-              'X-Title': 'Cache Deception Lab',
+              'HTTP-Referer': 'https://llm-red-team-lab.vercel.app',
+              'X-Title': 'LLM Red Team Lab',
             },
             body: JSON.stringify({
               model,
