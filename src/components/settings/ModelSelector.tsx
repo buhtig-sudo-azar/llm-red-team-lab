@@ -187,7 +187,7 @@ export function ModelSelector() {
 }
 
 function ApiTokenInput() {
-  const { apiToken, setApiToken, clearApiToken, checkModel } = useModelStore();
+  const { apiToken, setApiToken, clearApiToken, checkModel, currentModel } = useModelStore();
   const [inputValue, setInputValue] = useState('');
   const [isExpanded, setIsExpanded] = useState(false);
   const [isVerifying, setIsVerifying] = useState(false);
@@ -211,17 +211,20 @@ function ApiTokenInput() {
     setIsVerifying(true);
     setVerifyResult(null);
     try {
-      const result = await checkModel('nousresearch/hermes-3-llama-3.1-405b:free');
-      // Token is valid if: available OR rate_limited (means token works, just hit limit)
-      const isValid = result.available || result.reason === 'rate_limited';
+      // Check with the currently selected model
+      const result = await checkModel(currentModel);
+      // Token is VALID if: available, rate_limited, or insufficient_credits
+      // Only truly invalid if: invalid_token (401)
+      const isValid = result.available || result.reason === 'rate_limited' || result.reason === 'insufficient_credits';
       setVerifyResult(isValid ? 'valid' : 'invalid');
       if (isValid) {
-        toast({
-          title: 'Токен валиден',
-          description: result.reason === 'rate_limited'
-            ? 'API-ключ работает, но достигнут лимит запросов. Попробуйте позже.'
-            : 'API-ключ работает корректно.',
-        });
+        if (result.available) {
+          toast({ title: 'Токен валиден', description: 'API-ключ работает корректно.' });
+        } else if (result.reason === 'rate_limited') {
+          toast({ title: 'Токен валиден', description: 'Токен работает, но достигнут лимит запросов. Попробуйте позже.' });
+        } else if (result.reason === 'insufficient_credits') {
+          toast({ title: 'Токен валиден', description: 'Токен работает, но недостаточно кредитов для платной модели. Используйте бесплатную модель.' });
+        }
       } else {
         toast({
           title: 'Токен невалиден',

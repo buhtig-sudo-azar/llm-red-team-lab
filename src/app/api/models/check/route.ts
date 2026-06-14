@@ -50,6 +50,17 @@ export async function POST(req: NextRequest) {
       });
     }
 
+    // 402 = valid token but insufficient credits (token works, model needs payment)
+    if (response.status === 402) {
+      return NextResponse.json({
+        available: false,
+        model,
+        reason: 'insufficient_credits',
+        latency,
+      });
+    }
+
+    // 429 = valid token, just hit rate limit
     if (response.status === 429) {
       return NextResponse.json({
         available: false,
@@ -60,6 +71,15 @@ export async function POST(req: NextRequest) {
           remaining: 0,
           reset: rateLimitReset || null,
         },
+      });
+    }
+
+    // 401 = actually invalid token
+    if (response.status === 401) {
+      return NextResponse.json({
+        available: false,
+        model,
+        reason: 'invalid_token',
       });
     }
 
