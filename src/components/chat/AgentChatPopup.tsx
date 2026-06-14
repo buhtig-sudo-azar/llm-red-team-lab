@@ -70,21 +70,24 @@ export function AgentChatPopup() {
 
   const currentAgent = agent || Object.values(agents)[0];
 
-  // Чат закрыт — показываем только иконку чата
+  // Чат закрыт — показываем иконку чата с подписью
   if (!chatOpen) {
     return (
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
         <button
           onClick={handleOpen}
           className="group relative focus:outline-none"
           title="Открыть ИИ-наставника"
         >
           <span className={`absolute -inset-1.5 rounded-full bg-gradient-to-br ${currentAgent.gradient} opacity-40 group-hover:opacity-70 transition-opacity`} />
-          <span className="relative flex items-center justify-center w-14 h-14 rounded-full border-2 border-background shadow-lg bg-primary text-primary-foreground transition-transform group-hover:scale-105">
+          <span className="relative flex items-center justify-center w-14 h-14 rounded-full border-2 border-background shadow-lg bg-red-600 text-white transition-transform group-hover:scale-105">
             <MessageCircle className="h-6 w-6" />
           </span>
           <span className="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full border-2 border-background" />
         </button>
+        <span className="text-xs font-medium text-red-400 bg-red-500/10 px-2 py-1 rounded-md border border-red-500/20 animate-pulse">
+          AI-наставник
+        </span>
       </div>
     );
   }

@@ -22,10 +22,12 @@ import { useToast } from '@/hooks/use-toast';
 import { ModelAvailabilityPanel } from './ModelAvailabilityPanel';
 
 const DEFAULT_MODELS = [
+  { id: 'nousresearch/hermes-3-llama-3.1-405b:free', name: 'Hermes 3 405B', label: 'Hermes 3 405B (Free)' },
   { id: 'moonshotai/kimi-k2.6:free', name: 'Kimi K2.6', label: 'Kimi K2.6 (Free)' },
-  { id: 'deepseek/deepseek-r1:free', name: 'DeepSeek R1', label: 'DeepSeek R1 (Free)' },
-  { id: 'google/gemma-3-27b-it:free', name: 'Gemma 3 27B', label: 'Gemma 3 27B (Free)' },
-  { id: 'meta-llama/llama-4-maverick:free', name: 'Llama 4 Maverick', label: 'Llama 4 Maverick (Free)' },
+  { id: 'nvidia/nemotron-3-ultra-550b-a55b:free', name: 'Nemotron Ultra', label: 'Nemotron Ultra (Free)' },
+  { id: 'qwen/qwen3-next-80b-a3b-instruct:free', name: 'Qwen3 Next', label: 'Qwen3 Next (Free)' },
+  { id: 'meta-llama/llama-3.3-70b-instruct:free', name: 'Llama 3.3 70B', label: 'Llama 3.3 70B (Free)' },
+  { id: 'google/gemma-4-31b-it:free', name: 'Gemma 4 31B', label: 'Gemma 4 31B (Free)' },
 ];
 
 export function ModelSelector() {
