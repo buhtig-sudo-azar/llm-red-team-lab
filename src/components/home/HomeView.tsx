@@ -68,7 +68,7 @@ export function HomeView() {
             <span className="text-red-500">Lab</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Атаки на языковые модели — интерактивная лаборатория: jailbreak, prompt injection, model extraction, data exfiltration и новейшие техники эксплуатации 2025 года.
+            Атаки на языковые модели — интерактивная лаборатория: jailbreak, prompt injection, model extraction, data exfiltration и новейшие техники эксплуатации 2026 года.
           </p>
         </div>
       </motion.div>
