@@ -131,7 +131,11 @@ export type SandboxType =
   | 'jailbreak-lab' | 'prompt-inject-lab' | 'chain-attack-lab' | 'exfiltration-lab'
   | 'model-extract-lab' | 'rag-inject-lab' | 'adversarial-suffix-lab' | 'roleplay-bypass-lab'
   | 'multimodal-attack-lab' | 'api-exploit-lab' | 'data-poison-lab' | 'output-weaponize-lab'
-  | 'side-channel-lab' | 'context-inject-lab' | 'token-smuggle-lab' | 'agent-hijack-lab';
+  | 'side-channel-lab' | 'context-inject-lab' | 'token-smuggle-lab' | 'agent-hijack-lab'
+  | 'multi-step-lab' | 'cross-model-lab' | 'semantic-para-lab' | 'external-source-lab'
+  | 'formatted-data-lab' | 'tool-attack-lab' | 'tool-chain-lab' | 'economic-attack-lab'
+  | 'hidden-channel-lab' | 'long-context-lab' | 'metrics-lab' | 'classification-lab'
+  | 'variability-lab' | 'generator-lab';
 
 export interface Sandbox {
   type: SandboxType;
