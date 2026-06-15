@@ -6,6 +6,7 @@ import { topics } from '@/data/topics';
 import {
   Server, Key, Shield, Swords, Scissors, Route, Shrink, FileText, ShieldCheck,
   CheckCircle2, Circle, ChevronDown, RotateCcw, PanelLeftClose, Home,
+  Zap, Flame, Workflow,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Progress } from '@/components/ui/progress';
@@ -31,6 +32,7 @@ import {
 
 const iconMap: Record<string, React.ElementType> = {
   Server, Key, Shield, Swords, Scissors, Route, Shrink, FileText, ShieldCheck,
+  Zap, Flame, Workflow,
 };
 
 export function Sidebar() {

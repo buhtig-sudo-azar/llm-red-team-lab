@@ -6,7 +6,7 @@ import { useProgressStore } from '@/store/progress-store';
 import {
   Swords, Key, Shield, Database, Cpu, FileText, Eye, ShieldCheck,
   ArrowRight, Sparkles, BookOpen, MessageCircle, Cpu as CpuIcon, KeyRound, HelpCircle, Trophy, Flame,
-  RotateCcw,
+  RotateCcw, Zap, Workflow,
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
@@ -27,6 +27,7 @@ import Image from 'next/image';
 
 const iconMap: Record<string, React.ElementType> = {
   Swords, Key, Shield, Database, Cpu, FileText, Eye, ShieldCheck,
+  Zap, Flame, Workflow,
 };
 
 export function HomeView() {

@@ -7,6 +7,7 @@ import { useChatStore } from '@/store/chat-store';
 import {
   Server, Key, Shield, Swords, Scissors, Route, Shrink, FileText, ShieldCheck,
   ChevronRight, CheckCircle2, Circle, BotIcon, ArrowLeft,
+  Zap, Flame, Workflow,
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
@@ -15,6 +16,7 @@ import { motion } from 'framer-motion';
 
 const iconMap: Record<string, React.ElementType> = {
   Server, Key, Shield, Swords, Scissors, Route, Shrink, FileText, ShieldCheck,
+  Zap, Flame, Workflow,
 };
 
 export function CategoryView() {
